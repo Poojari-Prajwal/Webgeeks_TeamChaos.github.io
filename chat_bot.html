@@ -1,0 +1,188 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    
+  h2
+  {
+      color: firebrick;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+      font-size: 30;
+      margin-bottom: 0px;
+      } 
+
+      #chatbotd1
+      {
+          border: 2px solid firebrick;
+          border-radius: 10px;
+          height: 90%;
+          width: 53%;
+          margin-left:340px;
+          background: url("robot_bg.gif");
+          background-size: 700px 560px;
+          background-repeat: no-repeat;
+      }
+      input{
+          
+          height: 55px;
+          width:85%;
+          margin-left:20px;
+          border: 2px solid rgb(100, 100, 100);
+          border-radius: 10px;
+          position:sticky;
+          font-size: 20;
+          margin-top: 20px;
+          float:left;
+          border-radius: 50px;
+          position:sticky;
+      }
+      input:hover{
+          border:2px solid rgb(71, 120, 252);
+          box-shadow: 0 0 10px rgb(54, 70, 114);
+          transition: 0.5s;
+
+      }
+      
+      #chatLog
+      {
+          background-color: rgba(5, 252, 136, 0.5);
+          font-size: 19;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          width:58%;
+          border-radius:150px;
+          position: sticky;
+          height:130px;
+          width: 350px;
+          margin-left:160px;
+          word-wrap: break-word;
+          font-size:25;
+          overflow-y:hidden;
+          border-top-left-radius: 0px;
+      }
+      #chatLog2
+      {
+          background-color: rgba(206, 64, 182,0.5);
+          font-size: 19;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          width:50%;
+          border-radius:150px;
+          position: sticky;
+          height:130px;
+          width: 350px;
+          margin-left:10px;
+          overflow:hidden;
+          float:left;
+          word-wrap: break-word;
+          font-size:22;
+          overflow-y:hidden;
+          float:left;
+          border-top-right-radius: 0px;
+          
+      }
+      #profile1
+      {
+          height:120px;
+          width:120px;
+          border:2px solid black;
+          border-radius:60px;
+          margin-left:30px;
+          float:left;
+          margin-top:0px;
+      }
+      #profile2
+      {
+          height:120px;
+          width:120px;
+          border:2px solid black;
+          border-radius:60px;
+          float:right;
+          margin-right: 20px;
+          margin-top:0px;
+      }
+      #chatp1
+      {
+          float:right;
+          margin-right:35px;
+          margin-top: 23px;
+          position: sticky;
+      }
+      #chatbotd
+      {
+          background-color:black;
+          margin-top:-277px;
+          opacity:0.5;
+          border-radius: 10px;
+          height: 100%;
+          width: 100%;
+
+      }
+      #chatp2
+      {
+          float:left;
+          margin-top:65px;
+          margin-left:160px;
+      }
+</style>
+</head>
+<body>
+  
+
+    <div id="chatbotd1">
+        <h2>CHAT WITH AI BOT </h2><br>
+            <img id="profile1" src="user.jpg">  <p id="chatLog"> </p>
+    <br>
+    <p id="chatp2" onclick="texttospeech()"><i class="fa fa-volume-up fa-3x"></i></p>
+    <p id="chatLog2"></p> <img id="profile2" src="robot.jpg">
+    
+    <input id="userBox" type="text" placeholder=" Type your question" onkeydown="if(event.keyCode == 13) {talk()}"> 
+    <p id="chatp1"><i class="fa fa-microphone fa-3x"></i></p>
+    </div>
+    <script>
+        know = {
+        
+        "Hello" : "Hi there!",
+        "hello" : "Hi there!",
+        "HELLO" : "Hi there!",
+        "Who are you?" : "I am your Assistant",
+        "Who are you" : "I am your Assistant",
+        "who are you?" : "I am your Assistant",
+        "who are you" : "I am your Assistant",
+        "How are you?" : "I am Fine",
+        "How are you" : "I am Fine",
+        "how are you?" : "I am Fine",
+        "how are you" : "I am Fine",
+        "How old are you?" : "I am infinity in age",
+        "hi":"Hi there!",
+        "Hi" : "Hi there!",
+        "HI" : "Hi there!"
+        
+        };
+        
+        function talk() {
+        var user = document.getElementById("userBox").value;
+        document.getElementById("userBox").value= "";
+        document.getElementById("chatLog").innerHTML ="<br>&nbsp&nbsp&nbsp&nbsp"+ user;
+        
+        if (user in know) {
+            document.getElementById("chatLog2").innerHTML ="<br>&nbsp&nbsp&nbsp&nbsp"+ know[user] ;
+        
+        } else if(user=="" || user==null )
+        {
+            document.getElementById("chatLog2").innerHTML =  "<br>&nbsp&nbsp&nbsp&nbspHi, I am your Chatbot.";  
+        }
+        else
+        {
+        document.getElementById("chatLog2").innerHTML = "<br>&nbsp&nbsp&nbsp&nbspTo know more, kindly drop a mail to <b>teamchaos.support@gmail.com</b><br>";
+        }
+        }
+        function texttospeech()
+        {
+            var msg;
+            msg=document.getElementById("chatLog2");
+            window.speechSynthesis.speak(msg);
+        }
+        
+        </script>
+</body>
+</html>

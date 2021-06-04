@@ -1,0 +1,234 @@
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1" />
+        <title>Team Chaos</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+            body
+            {
+                overflow:hidden;
+                font-family: 'Poppins', sans-serif;
+            }
+            #maindiv1
+            {
+                float:left;
+                position: absolute;
+                margin-left:-10px;
+            }
+            #maindiv2
+            {
+                float:right;
+                background-color:#12f8ad;
+                height:700px;
+                width:860px;
+                margin-left:0px;
+            }
+            #welcome
+            {
+                font-size:50;
+                font-weight: bolder;
+                word-spacing: 3px;
+                margin-left:60px;
+                margin-top:20px;
+                color:rgb(59, 65, 62);
+                text-shadow: 3px 3px white;
+            }
+            #intro
+            {
+                background-color:rgb(59, 65, 62);
+                height:350px;
+                width:400px;
+                font-size:30;
+                color: #12f8ad;
+                border-radius: 50%;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                box-shadow: 3px 3px 10px white;
+            }
+            #whytowait
+            {
+                font-size:28;
+                font-weight : bolder;
+                color:rgb(59, 65, 62);
+                text-shadow:1px 1px white;
+                margin-left:300px;
+                font-weight: bolder;
+            }
+            #letsget
+            {
+                height:45px;
+                width:250px;
+                font-family: 'Poppins', sans-serif;
+                font-size:25;
+                color:rgb(59, 65, 62);
+                text-shadow:0px 1px white;
+                border-radius:25px;
+                background-color: rgb(59, 65, 62); 
+                color:white;
+            }
+            #letsget:hover
+            {
+                color: rgb(59, 65, 62); 
+                background-color:white;
+                text-shadow:0px 1px rgb(59, 65, 62); 
+                transition: 0.5s;
+            }
+            #hideload
+            {
+                display:none;
+                animation: fadeInUp 3s;
+            }
+            #showload
+            {
+                background-image: url("loading.gif");
+                background-repeat:no-repeat;
+                position:absolute;
+                margin-left: -10px;
+                margin-top:-10px;
+                height:650px;
+                width:1370px;
+                background-size: 1370px 650px;
+            }
+            .mobilediv
+            {
+                display:none;
+                height:0px;
+                width:0px;
+                background-color:rgba(0,0,0,0.1);
+                color:white;
+                font-size:0;
+            }
+            .mobilediv button
+            {
+                font-size:0;
+                border:none;
+            }
+            @keyframes fadeInUp 
+            {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, 100%, 0);
+                }
+    
+                to {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+            @media (max-width: 480px) 
+            {
+                #showload
+                {
+                    background-size: 1000px 650px;
+                    margin-left:-310px;
+                }
+                .maincls1 img
+                {
+                    height: 200px;
+                    width:370px;
+                    margin-top:-10px;
+                }
+                #maindiv2
+                {
+
+                   display: none;
+                }
+            }
+            .mobilediv
+            {
+                display:block;
+                height:1000px;
+                width:1000px;
+                background-color:#12f8ad;
+                color:black;
+                font-size:10;
+                margin-left:-10px;
+            }
+            .mobilediv button
+            {
+                font-size:20;
+                margin-left:20px;
+            }
+            #welcomemob
+            {
+                font-size:30;
+                color:rgb(59, 65, 62);
+                text-shadow: 3px 3px white;
+                font-weight: bolder;
+            }
+            #intromob
+            {
+                font-size:17;
+                background-color:rgb(59, 65, 62);
+                color:#12f8ad;
+                height:180px;
+                width:230px;
+                border-top-right-radius: 45%;
+                border-bottom-right-radius: 45%;
+            }
+            #whytowaitmob
+            {
+                font-size:20;
+                color:rgb(59, 65, 62);
+                margin-left:20px;
+                font-weight:bolder;
+            }
+            #letsgetmob
+            {
+                height:40px;
+                width:200px;
+                font-family: 'Poppins', sans-serif;
+                font-size:20;
+                color:rgb(59, 65, 62);
+                text-shadow:0px 1px white;
+                border-radius:25px;
+                background-color: rgb(59, 65, 62); 
+                color:white;
+                margin-left:0px;
+            }
+            #letsgetmob:hover
+            {
+                color: rgb(59, 65, 62); 
+                background-color:white;
+                text-shadow:0px 1px rgb(59, 65, 62); 
+                transition: 0.5s;
+        }
+            </style>
+    </head>
+    <body>
+        <div id="hideload">
+        <div id="maindiv1" class="maincls1"><img src="ecom.jpg" height=700px width=500px></div>
+            <div id="maindiv2" class="maincls2">
+                <p id="welcome">WELCOME TO BLAHBLAH.COM</p>
+               <p id="intro"><br><br> &nbsp&nbsp&nbsp Website intro <br> &nbsp&nbsp&nbsp in 3 lines of<br> &nbsp&nbsp&nbsp whatever i dont know.</p>
+               <p id="whytowait">Why to wait?
+                   <a href="login.html"><button id="letsget">Lets get started!</button></a>
+            </p> 
+           </div>
+
+         </div>
+         <div id="showload">
+             
+         </div>
+         <div class="mobilediv" id="abc">
+             <br><br><br><br><br><br><br><br><br><br><br>
+            <p id="welcomemob">&nbsp&nbsp WELCOME TO <br>&nbsp&nbsp BLAHBLAH.COM</p>
+            <p id="intromob"><br><br> &nbsp&nbsp&nbsp Website intro <br> &nbsp&nbsp in 3 lines of<br> &nbsp&nbsp whatever i dont know.</p>
+            <p id="whytowaitmob">Why to wait?
+                <a href="login.html"><button id="letsgetmob">Lets get started!</button></a>
+         </p> 
+
+         </div>
+         <script>
+          function show()
+          {
+              document.getElementById("hideload").style.display="block";
+              document.getElementById("showload").style.display="none";
+          }
+          setTimeout(show,4000);
+        </script>
+    </body>
+</html>
