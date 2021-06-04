@@ -118,13 +118,21 @@
                     transform: none;
                 }
             }
+            #showloadmob
+            {
+                display: : none;
+            }
             @media (max-width: 480px) 
             {
                 #showload
                 {
-                    background-image:url("loading-mob.gif");
+                    display: none;
+                }
+                #showloadmob
+                {
                     background-color:white;
-                    overflow:hidden;
+                    height: 1500px;
+                    width:600px;
                 }
                 .maincls1 img
                 {
@@ -222,6 +230,9 @@
                 <a href="login.html"><button id="letsgetmob">Lets get started!</button></a>
          </p> 
 
+         </div>
+         <div id="showloadmob">
+             <center><img src="loading-mob.gif" height=200px width=200px></center>
          </div>
          <script>
           function show()
