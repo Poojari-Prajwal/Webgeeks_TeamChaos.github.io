@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1" />
@@ -9,23 +10,36 @@
             @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
             body
             {
-                overflow:hidden;
+                
                 font-family: 'Poppins', sans-serif;
             }
-            #maindiv1
-            {
-                float:left;
-                position: absolute;
-                margin-left:-10px;
-            }
-            #maindiv2
-            {
+
+            .main{
+              display:flex;
+             
+
+             }
+            .main img{
+            width:40%;
+           }
+           
+           #maindiv2
+               {
                 float:right;
                 background-color:#12f8ad;
                 height:700px;
                 width:860px;
                 margin-left:0px;
+                
+
+               }
+
+           
+            #hideload
+            {
+                display:none;
             }
+            
             #welcome
             {
                 font-size:50;
@@ -57,6 +71,63 @@
                 margin-left:300px;
                 font-weight: bolder;
             }
+            
+
+            @media screen and (max-width:1000px)
+            {
+                #whytowait
+                {
+                font-size:20;
+                margin-left:150px;
+               
+                }
+                 #intro
+                 {
+                    height:300px;
+                    width:350px;
+                    font-size:25;
+                 }
+                 #welcome
+                {
+                font-size:40;
+                } 
+                
+                #letsget
+               {
+                height:55px;
+                width:200px;
+                font-size:20;
+               } 
+        
+            }
+
+            @media screen and (max-width:670px)
+            {
+                #whytowait
+                {
+                font-size:14;
+                margin-left:90px;
+               
+                }
+                 #intro
+                 {
+                    height:260px;
+                    width:280px;
+                    font-size:20;
+                 }
+                 #welcome
+                {
+                font-size:30;
+                } 
+                
+                #letsget
+               {
+                height:50px;
+                width:150px;
+                font-size:18;
+              } 
+            }
+
             #letsget
             {
                 height:45px;
@@ -76,10 +147,7 @@
                 text-shadow:0px 1px rgb(59, 65, 62); 
                 transition: 0.5s;
             }
-            #hideload
-            {
-                display:none;
-            }
+           
             #showload
             {
                 background-image: url("loading.gif");
@@ -105,34 +173,56 @@
                 font-size:0;
                 border:none;
             }
-            @media (max-width: 480px) 
+
+            @media screen and (max-width: 550px) 
             {
+               
+                
                 #showload
                 {
                     background-size: 1100px 1100px;
                     margin-left:-330px;
-                }
-                .maincls1 img
-                {
-                    height: 230px;
-                    width:400px;
-                    margin-top:-10px;
-                }
-                #maindiv2
-                {
+                }    
+                .main{
+                   display:flex;
+                   flex-direction: column;
+                   justify-content: flex-start;
+                   height:100%;
+                   border:2px solid green;
 
-                   display: none;
                 }
-            .mobilediv
-            {
-                display:block;
-                height:800px;
-                width:600px;
-                background-color:#12f8ad;
-                color:black;
-                font-size:10;
-                margin-left:-10px;
-            }
+                .main img{
+                    width:100%;
+                    height:100%;
+
+                } 
+
+               #maindiv2
+               {
+                   width:100%;
+                   height:100%;
+               }
+
+               #welcome
+                {
+                font-size:25;
+                margin-left:20px;
+                } 
+
+                #intro
+                 {
+                    height:200px;
+                    width:250px;
+                    font-size:15;
+                 }  
+
+                 #letsget
+               {
+                height:50px;
+                width:200px;
+                font-size:18;
+               }
+            
             .mobilediv button
             {
                 font-size:20;
@@ -140,7 +230,7 @@
             }
             #welcomemob
             {
-                font-size:30;
+                font-size:25;
                 color:rgb(59, 65, 62);
                 text-shadow: 3px 3px white;
                 font-weight: bolder;
@@ -190,35 +280,43 @@
                 font-weight: bolder;
                 margin-left: 135px;
             }
+         
+           
+            
         }
-            </style>
+   </style>
     </head>
+
     <body>
         <div id="hideload">
-        <div id="maindiv1" class="maincls1"><img src="ecom.jpg" height=700px width=500px></div>
-            <div id="maindiv2" class="maincls2">
+         <div class="main"> 
+        <img src="ecom.jpeg">
+            <div id="maindiv2">
                 <p id="welcome">WELCOME TO BLAHBLAH.COM</p>
-               <p id="intro"><br><br> &nbsp&nbsp&nbsp Website intro <br> &nbsp&nbsp&nbsp in 3 lines of<br> &nbsp&nbsp&nbsp whatever i dont know.</p>
+               <p id="intro"><br><br> &nbsp&nbsp&nbsp Website intro <br> &nbsp&nbsp&nbsp in 3 lines of<br> &nbsp&nbsp&nbsp whatever
+                 i dont know.</p>
                <p id="whytowait">Why to wait?
-                   <a href="login.html"><button id="letsget">Lets get started!</button></a>
+                <a href="login.html"><button id="letsget">Lets get started!</button></a>
             </p> 
            </div>
-
-         </div>
+           </div>
+           </div>
+        
          <div id="showload">
              
          </div>
          <div class="mobilediv" id="abc">
-             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <p id="welcomemob">&nbsp&nbsp WELCOME TO <br>&nbsp&nbsp BLAHBLAH.COM</p>
-            <p id="intromob"><br><br> &nbsp&nbsp&nbsp Website intro <br> &nbsp&nbsp in 3 lines of<br> &nbsp&nbsp whatever i dont know.</p>
-            <p id="whytowaitmob">Why to wait?
-                <a href="login.html"><button id="letsgetmob">Lets get started!</button></a>
-         </p> 
-         <p id="kkk"><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+           <p id="welcomemob">&nbsp&nbsp WELCOME TO <br>&nbsp&nbsp BLAHBLAH.COM</p>
+           <p id="intromob"><br><br> &nbsp&nbsp&nbsp Website intro <br> &nbsp&nbsp in 3 lines of<br> &nbsp&nbsp whatever i dont know.</p>
+           <p id="whytowaitmob">Why to wait?
+               <a href="login.html"><button id="letsgetmob">Lets get started!</button></a>
+        </p> 
+        <p id="kkk"><br>
 
-          Please wait...</p>
-         </div>
+         Please wait...</p>
+        </div>
+         
          <script>
           function show()
           {
