@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <title>Payment</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1" />
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+        .mainc
+        {
+            height: 13vw;
+            width:50vw;
+            border:3px solid #12f8ad;
+            margin-top:2vw;
+            font-size:25;
+            font-family: 'Poppins', sans-serif;
+            color:white;
+        }
+        h1{
+            font-family: 'Poppins', sans-serif;
+            margin-top:2px;
+        }
+        .head
+        {
+            background-color: #12f8ad;
+            height:5vw;
+        }
+        body
+        {
+            background-color: rgb(59, 65, 62);
+        }
+        #cardno, #cardname
+        {
+            height:40px;
+            width:500px;
+            font-size:18;
+            background-color: white;
+            border-radius:5px;
+        }
+        #cardname
+        {
+            margin-top:10px;
+        }
+        #mmyy, #cvv
+        {
+            height:36px;
+            width:230px;
+            margin-top:10px;
+        }
+        #cvv
+        {
+            margin-left:10px;
+
+        }
+        button
+        {
+            font-size:18;
+            margin-top: 1vw;
+            height:40px;
+            color: black;
+            background-color:#12f8ad;
+            border-radius:5px;
+
+        }
+        button:hover{
+            background-color: white;
+            transition: 0.3s;
+            border:3px solid #12f8ad;
+            color:#12f8ad;
+            font-weight:bolder;
+            background-color: rgb(59, 65, 62);
+        }
+        a:hover{
+            color:#12f8ad;
+        }
+        #payc1
+        {
+            margin-top:2px;
+        }
+        #upi
+        {
+            height:40px;
+            width:500px;
+            font-size:18;
+        }
+        #payp1, #payp2,#hr1,#hr3
+        {
+            display:none;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        @media screen and (max-width:1000px)
+        {
+            .head
+            {
+                height:27vw;
+            }
+            .mainc{
+                height:40vw;
+                font-size: 17;
+                margin-top:20vw;
+                width:90vw;
+                border : 0px solid red;
+
+            }
+            #cardno , #cardname ,#mmyy,#cvv , #upi
+            {
+                width:80vw;
+                margin-left:0vw;
+                margin-bottom:10px;
+
+            }
+            #mmyy
+            {
+                width:38vw;
+            }
+            #cvv
+            {
+                width:38vw;
+            }
+            
+        }
+
+    </style>
+    </head>
+    <body><center>
+            <div class="head"><h1>Select payment method</h1></div>
+            <div class="mainc" id="mainid">
+            <div id="payc1"><p onclick="div1()">Credit/ Debit card</p>
+            <hr id="hr1">
+            <p id="payp1">
+                <input id="cardno" placeholder="Card number"> <br>
+                <input id="cardname" placeholder="Name on the card"><br>
+                <input id="mmyy" placeholder="MM/YY"> <input id="cvv" placeholder="CVV"><br>
+                <button id="b1"><a href="paymentdone.html">Proceed to pay</a></button>
+            </p>
+            </div><hr id=hr2>
+            <div id="payc2"> <p onclick="div2()"> UPI </p>
+                <hr id="hr3">
+                <p id="payp2">
+                    <input id="upi"placeholder="Enter the UPI ID"><br>
+                    <button id="b2"><a href="paymentdone.html">Proceed to pay</a></button>
+                </p>
+                </div>
+            </div>
+    </center>   
+    <script>
+        var x,y;
+        x=1;
+        y=1;s
+        function div1()
+        {
+        if(x==1)
+        {
+            document.getElementById("payp1").style.display="block";
+            document.getElementById("hr1").style.display="block";
+            document.getElementById("mainid").style.height+="29vw";
+            x=0;
+            document.getElementById("payp2").style.display="none";
+            document.getElementById("hr3").style.display="none";
+            y=1;
+        }
+        else
+        {
+            document.getElementById("payp1").style.display="none";
+            document.getElementById("hr1").style.display="none";
+
+            x=1;
+            document.getElementById("payp2").style.display="none";
+            document.getElementById("hr3").style.display="none";
+   
+            y=1;
+        }
+    }
+    function div2()
+        {
+        if(y==1)
+        {
+            document.getElementById("payp2").style.display="block";
+            document.getElementById("hr3").style.display="block";
+            document.getElementById("mainid").style.height+="25vw";
+            y=0;
+            document.getElementById("payp1").style.display="none";
+            document.getElementById("hr1").style.display="none";
+
+            x=1;
+        }
+        else
+        {
+            document.getElementById("payp2").style.display="none";
+            document.getElementById("hr3").style.display="none";
+    
+            y=1;
+            document.getElementById("payp1").style.display="none";
+            document.getElementById("hr1").style.display="none";
+     
+            x=1;
+        }
+    }
+    </script>  
+    </body>
+</html>
