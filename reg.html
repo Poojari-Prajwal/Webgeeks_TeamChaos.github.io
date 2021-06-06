@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1, minimum-scale=1" />
+        <style>
+                  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+                 
+                  h1{
+                      background-color: #12f8ad;
+                      font-family: 'Poppins', sans-serif;
+                      font-size:40;
+                      text-shadow:2px 2px white;
+                  }
+                  body{
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 20;
+                    color:black;
+                  }
+                  .main
+                  {
+                      margin-left:5vw;
+                  }
+                  input{
+                      border: 2px solid white;
+                      border-bottom:2px solid black;
+                      margin-top:1vw;
+                      width:60vw;
+                      height:50px;
+                      font-size:20;
+                      background-color: white;
+                  }
+                  button{
+                      height:3vw;
+                      width:12vw;
+                      margin-top:1vw;
+                      font-size: 20;
+                      font-family: 'Poppins', sans-serif;
+                      border: 2px solid black;
+                    border-radius: 10px;
+                    background-color:white;
+                  }
+                  #btn2 
+                  {
+                      display:none;
+                      width: 18vw;
+                      background-color: #12f8ad;
+                  }
+
+                  a{
+                      text-decoration: none;
+                      color:black;
+                  }
+                  span{
+                      color:red;
+                  }
+                  @media screen and (max-width:550px)
+                  {
+                      button 
+                      {
+                          height:25vw;
+                          width:40vw;
+                      }
+                      
+                      #btn2
+                      {
+                          width:80vw;
+                  }
+
+                
+        </style>
+    </head>
+    <body>
+        <h1> &nbsp&nbsp&nbsp&nbsp Registration</h1>
+        <div class="main">
+            Name:<span>*</span>  <br>
+            <input id="name">  <br><br>
+            College:<span>*</span>  <br>
+            <input id="clg">  <br><br>
+            Year & Branch:<span>*</span>  <br>
+            <input id="year">  <br><br>
+            USN no:<span>*</span>  <br>
+            <input id="usn">  <br><br>
+            Choose event (You can choose multiple events at a time) <span>*</span><br>
+            <button onclick="f1()" id="a1">Hackathon</button> <button onclick="f2()" id="a2">Webethon</button> <button onclick="f3()" id="a3"> Code Masters</button> <button id="a4" onclick="f4()">IPL Auction</button>
+            <br><br>
+            <p id="amt"> Amount to be paid = 0</p>
+            <button id="btn" onclick="verify()">Verify details</button>
+             <a href="payment.html"> <button id="btn2">Pay and place order</button></a>
+            
+            
+
+        </div>
+    <script>
+        var a=document.getElementById("name").value;
+        var b=document.getElementById("clg").value;
+        var c=document.getElementById("year").value;
+        var d=document.getElementById("usn").value;
+        function verify()
+        {
+            var a=document.getElementById("name").value;
+        var b=document.getElementById("clg").value;
+        var c=document.getElementById("year").value;
+        var d=document.getElementById("usn").value;
+            if(a=="" || b=="" || c=="" || d=="")
+            {
+                alert("Incomplete data!");
+            }
+            if(a!="" && b!="" && c!="" &&d!="")
+            {
+                alert("Data has been verified.");
+                document.getElementById("btn2").style.display="block";
+                document.getElementById("btn").style.display="none";
+            }
+        }
+        var k,l,m,n;
+        k=0;
+        l=0;
+        m=0;
+        n=0;
+        var o,p,q,r;
+        var am;
+        am=0;
+       function f1()
+        {
+            if(k==0)
+            {
+            am=am+30;
+            document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+            k=1;
+            document.getElementById("a1").style.backgroundColor="#12f8ad";
+            }
+            else
+            {
+                am=am-30;
+                document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+                k=0;
+                document.getElementById("a1").style.backgroundColor="white";
+            }
+        }
+        function f2()
+        {
+            if(n==0)
+            {
+            am=am+30;
+            document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+            n=1;
+            document.getElementById("a2").style.backgroundColor="#12f8ad";
+            }
+            else
+            {
+                am=am-30;
+                document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+                n=0;
+                document.getElementById("a2").style.backgroundColor="white";
+            }
+        }
+        function f3()
+        {
+            if(l==0)
+            {
+            am=am+30;
+            document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+            l=1;
+            document.getElementById("a3").style.backgroundColor="#12f8ad";
+            }
+            else
+            {
+                am=am-30;
+                document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+                l=0;
+                document.getElementById("a3").style.backgroundColor="white";
+            }
+        }
+        
+        function f4()
+        {
+            if(m==0)
+            {
+            am=am+30;
+            document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+            m=1;
+            document.getElementById("a4").style.backgroundColor="#12f8ad";
+            }
+            else
+            {
+                am=am-30;
+                document.getElementById("amt").innerHTML="Amount to be paid = " + am;
+                m=0;
+                document.getElementById("a4").style.backgroundColor="white";
+            }
+        }
+           
+    </script>
+    </body>
+</html>
